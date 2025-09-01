@@ -1,0 +1,44 @@
+<div class="flex h-screen justify-items-center items-center">
+  <div class="mx-10 w-full sm:mx-auto sm:max-w-sm">
+    <div class="mx">
+      <img class="mx-auto h-48 w-auto" src="assets/images/empregUFU-bg-less.png" alt="EmpregUFU">
+      <h2 class="mt-10 text-center text-2xl/9 font-bold tracking-tight text-gray-900">EmpregUFU</h2>
+    </div>
+    <form class="flex flex-col gap-5" [formGroup]="form">
+      <div class="flex flex-col gap-2">
+        <label for="email" class="block text-sm/6 font-medium text-gray-900">Email</label>
+        <div>
+          <input formControlName="email" tabindex="1"
+            type="email" name="email" id="email" required 
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 
+            outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+        </div>
+        <small class="text-red-500 mx-1" *ngIf="validateError('email')">Preencha o email.</small>  
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <div class="flex items-center justify-between">
+          <label for="password" class="block text-sm/6 font-medium text-gray-900">Senha</label>
+          <div class="text-sm">
+            <a href="#" class="font-semibold text-indigo-600 hover:text-indigo-500">Esqueceu a senha?</a>
+          </div>
+        </div>
+        <div>
+          <input formControlName="password" tabindex="2"
+            type="password" name="password" id="password" required 
+            class="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 
+            placeholder:text-gray-400 focus:outline-2 focus:-outline-offset-2 focus:outline-indigo-600 sm:text-sm/6">
+        </div>
+        <small class="text-red-500 mx-1" *ngIf="validateError('password')">Preencha a senha corretamente.</small>
+      </div>
+
+      <div class="mt-2">
+        <button type="submit" (click)="login()" tabindex="3"
+          class="flex w-full justify-center rounded-md bg-customblue-500 px-3 py-1.5 text-sm/6 font-semibold text-white shadow-xs 
+          hover:bg-customblue-300 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+          Entrar
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

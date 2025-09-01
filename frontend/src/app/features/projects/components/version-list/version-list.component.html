@@ -1,0 +1,86 @@
+<div class="flex flex-col h-full" [ngClass]="{'card' : !openInModal, 'p-1': openInModal }">
+  <div class="flex justify-start mb-5">
+    <p-button label="Novo" icon="pi pi-plus" outlined="true" (onClick)="createVersion()" />
+  </div>
+  <p-table #dt
+    [value]="versions.length ? versions : skeleton"
+    [lazy]="true"
+    (onLazyLoad)="loadVersionsLazy($event)"
+    [paginator]="true"
+    [alwaysShowPaginator]="false"
+    [pageLinks]="3"
+    [rows]="10"
+    [rowsPerPageOptions]="[10, 50, 100]"
+    [filterDelay]="1000"
+    [rowHover]="true"
+    [showCurrentPageReport]="true"
+    currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} versões"
+    paginatorDropdownAppendTo="body"
+    tableStyleClass="w-full h-full"
+    size="small">
+    <ng-template #header>
+      <tr>
+        <th pSortableColumn="number">
+          Número
+          <p-sortIcon field="number" />
+        </th>
+        <th pSortableColumn="created">
+          Data
+          <p-sortIcon field="created" />
+        </th>
+        <th style="width: 10rem;">
+          Notas de Versão
+        </th>
+        <th style="width: 10rem;">
+          Arquivo
+        </th>
+        <th style="width: 8rem;">Ações</th>
+      </tr>
+      <tr>
+        <th>
+          <p-columnFilter type="text" field="number" matchMode="contains" showMenu="false" pTooltip="Pressione enter para pesquisar" tooltipEvent="focus" tooltipPosition="top"></p-columnFilter>
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template #body let-version>
+      <tr *ngIf="versions.length">
+        <td>{{ version.number }}</td>
+        <td>{{ version.created | date: 'dd/MM/yyyy HH:mm' }}</td>
+        <td>
+          <p-button icon="pi pi-info-circle" class="mr-2" [text]="true" (onClick)="openNotes(version)" pTooltip="Pré-visualizar" tooltipPosition="top"/>
+        </td>
+        <td>
+          <a class="p-button-link hover:underline hover:decoration-1" [href]="version.fileUrl" [download]="version.fileName" target="_blank">[{{ version.fileName }}]</a>
+        </td>
+        <td>
+          <p-button icon="pi pi-pencil" severity="warn" class="mr-2" [rounded]="true" [outlined]="true" (onClick)="updateVersion(version)" />
+          <p-button icon="pi pi-trash" severity="danger" [rounded]="true" [outlined]="true" (onClick)="deleteVersion($event, version.id)" />
+        </td>
+      </tr>
+      <tr *ngIf="!requestReturned && !versions.length">
+        <td><p-skeleton /></td>
+        <td><p-skeleton /></td>
+        <td><p-skeleton /></td>
+        <td><p-skeleton /></td>
+        <td><p-skeleton /></td>
+      </tr>
+      <tr *ngIf="requestReturned && !versions.length">
+        <td colspan="5" style="text-align: center;">
+          Nenhuma versão encontrada.
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+  <p-drawer 
+    [(visible)]="notePreview" 
+    (onHide)="clearPreview()"
+    [header]="noteHeader"
+    position="right"
+    styleClass="!w-full md:!w-80 lg:!w-[30rem]">
+    <p>{{ noteBody }}</p>
+  </p-drawer>
+</div>

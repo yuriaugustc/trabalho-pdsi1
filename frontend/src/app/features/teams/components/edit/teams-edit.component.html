@@ -1,0 +1,35 @@
+<div class="flex w-full pt-5">
+  <form [formGroup]="form" class="flex flex-col w-full gap-8">
+    <div class="w-full">
+      <p-floatlabel>
+        <input pInputText fluid id="name" formControlName="name" autocomplete="off" />
+        <label for="name">Nome</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <input pInputText fluid id="description" formControlName="description" autocomplete="off" />
+        <label for="description">Descrição</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <p-select fluid appendTo="body" showClear="true" [virtualScroll]="true" [filter]="true"
+          [options]="users" formControlName="leaderId"
+          optionLabel="name" optionValue="id" class="w-full" />
+        <label for="email">Líder</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <p-multiselect fluid appendTo="body" showClear="true" [virtualScroll]="true"
+          [options]="users" formControlName="members" 
+          optionLabel="name" optionValue="id" class="w-full" />
+        <label for="email">Membros</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full flex justify-end">
+      <p-button label="Salvar" (onClick)="save()"/>
+    </div>
+  </form>
+</div>

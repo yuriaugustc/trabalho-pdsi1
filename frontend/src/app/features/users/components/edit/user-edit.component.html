@@ -1,0 +1,57 @@
+<div class="flex w-full pt-5">
+  <form [formGroup]="form" class="flex flex-col w-full gap-8">
+    <div class="w-full">
+      <p-floatlabel>
+        <input pInputText fluid id="name" formControlName="name" autocomplete="off" />
+        <label for="name">Nome</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <input pInputText fluid id="email" formControlName="email" autocomplete="off" />
+        <label for="email">Email</label>
+      </p-floatlabel>
+    </div>
+    <div class="flex gap-2">
+      <p-floatlabel class="w-full">
+        <p-password id="senha" fluid formControlName="password" 
+          autocomplete="off" appendTo="body" [toggleMask]="true"
+          [mediumRegex]="mediumRegex()" [strongRegex]="strongRegex()">
+          <ng-template #footer>
+            <p-divider />
+            <ul class="pl-2 ml-2 my-0 leading-normal">
+              <li>Mínimo 8 caracteres</li>
+              <li>Ao menos 1 carectere maiúsculo</li>
+              <li>Ao menos 1 caractere numérico</li>
+              <li>Ao menos 1 caractere especial</li>
+            </ul>
+          </ng-template>
+        </p-password>
+        <label for="senha">
+          Senha
+        </label>
+      </p-floatlabel>
+      <p-button icon="pi pi-key" severity="secondary"
+        pTooltip="Gerar Senha" tooltipPosition="top" (onClick)="generatePassword()"/>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <p-select fluid appendTo="body" showClear="true"
+        [options]="roles" formControlName="role"
+          optionLabel="label" optionValue="value" class="w-full" />
+        <label for="email">Nível de Acesso</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <p-multiselect fluid appendTo="body" showClear="true"
+          [options]="accesses" formControlName="accesses" 
+          optionLabel="label" optionValue="value" class="w-full" />
+        <label for="email">Acesso as páginas</label>
+      </p-floatlabel>
+    </div>
+    <div class="w-full flex justify-end">
+      <p-button label="Salvar" (onClick)="save()" />
+    </div>
+  </form>
+</div>

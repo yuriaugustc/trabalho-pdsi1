@@ -1,0 +1,32 @@
+
+<div class="flex w-full pt-5">
+  <form [formGroup]="form" class="flex flex-col w-full gap-8">
+    <div class="w-full">
+      <label for="integeronly">Número</label>
+      <div class="mt-2 flex gap-2 items-end">
+        <p-inputnumber fluid inputId="integeronly" formControlName="major" />
+        .
+        <p-inputnumber fluid formControlName="minor" />
+        .
+        <p-inputnumber fluid formControlName="build" />
+      </div>
+    </div>
+    <div class="w-full">
+      <p-floatlabel>
+        <textarea pTextarea fluid id="note" formControlName="note" rows="5" style="resize: none" [maxLength]="1000"></textarea>
+        <label for="note">Notas</label>
+      </p-floatlabel>
+      <label class="px-2 flex justify-self-end" [ngClass]="{'font-bold': notesLength() == 1000 }">
+        <small>{{ notesLength() }}/1000</small>
+      </label>
+    </div>
+    <div class="w-full flex items-center gap-2" *ngIf="!isUpdate">
+      <input type="file" #fiUpl class="hidden" (change)="onUpload($event)" [accept]="filesAccepted()">
+      <p-button label="Escolher" icon="pi pi-cloud-upload" (onClick)="fiUpl.click()" />
+      <a *ngIf="fileUrl" class="p-button-link hover:underline hover:decoration-1" [href]="fileUrl" [download]="fileName" target="_blank">[ {{ fileName }} ]</a>
+    </div>
+    <div class="w-full flex justify-end">
+      <p-button label="Salvar" (onClick)="save()" />
+    </div>
+  </form>
+</div>
