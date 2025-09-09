@@ -1,0 +1,186 @@
+[
+  {
+    "id": 1,
+    "name": "Estruturas de Dados"
+  },
+  {
+    "id": 2,
+    "name": "Banco de Dados"
+  },
+  {
+    "id": 3,
+    "name": "Programação Web"
+  },
+  {
+    "id": 4,
+    "name": "Engenharia de Software"
+  },
+  {
+    "id": 5,
+    "name": "Estatística e Probabilidade"
+  },
+  {
+    "id": 6,
+    "name": "Inteligência Artificial"
+  },
+  {
+    "id": 7,
+    "name": "Mineração de Dados"
+  },
+  {
+    "id": 8,
+    "name": "Sistemas de Informação e Sociedade"
+  },
+  {
+    "id": 9,
+    "name": "Comunicação Digital"
+  },
+  {
+    "id": 10,
+    "name": "Gestão de Conteúdo"
+  },
+  {
+    "id": 11,
+    "name": "Gestão de Projetos"
+  },
+  {
+    "id": 12,
+    "name": "Modelagem de Processos de Negócio"
+  },
+  {
+    "id": 13,
+    "name": "Análise de Requisitos"
+  },
+  {
+    "id": 14,
+    "name": "Interação Humano-Computador"
+  },
+  {
+    "id": 15,
+    "name": "Design de Interfaces"
+  },
+  {
+    "id": 16,
+    "name": "Design Gráfico"
+  },
+  {
+    "id": 17,
+    "name": "Programação Orientada a Objetos"
+  },
+  {
+    "id": 18,
+    "name": "Redes de Computadores"
+  },
+  {
+    "id": 19,
+    "name": "Sistemas Operacionais"
+  },
+  {
+    "id": 20,
+    "name": "Manutenção de Computadores"
+  },
+  {
+    "id": 21,
+    "name": "Segurança da Informação"
+  },
+  {
+    "id": 22,
+    "name": "Contabilidade e Finanças"
+  },
+  {
+    "id": 23,
+    "name": "Sistemas Gerenciais"
+  },
+  {
+    "id": 24,
+    "name": "Sistemas de Apoio à Decisão"
+  },
+  {
+    "id": 25,
+    "name": "Economia"
+  },
+  {
+    "id": 26,
+    "name": "Gestão de Pessoas"
+  },
+  {
+    "id": 27,
+    "name": "Psicologia Organizacional"
+  },
+  {
+    "id": 28,
+    "name": "Legislação Trabalhista"
+  },
+  {
+    "id": 29,
+    "name": "Teoria Geral da Administração"
+  },
+  {
+    "id": 30,
+    "name": "Organização e Métodos"
+  },
+  {
+    "id": 31,
+    "name": "Arquitetura de Sistemas de Informação"
+  },
+  {
+    "id": 32,
+    "name": "Criptografia"
+  },
+  {
+    "id": 33,
+    "name": "Auditoria de Sistemas"
+  },
+  {
+    "id": 34,
+    "name": "Computação em Nuvem"
+  },
+  {
+    "id": 35,
+    "name": "Qualidade de Software"
+  },
+  {
+    "id": 36,
+    "name": "Marketing e Vendas"
+  },
+  {
+    "id": 37,
+    "name": "Pesquisa e Usabilidade"
+  },
+  {
+    "id": 38,
+    "name": "Programação para Dispositivos Móveis"
+  },
+  {
+    "id": 39,
+    "name": "Computação Gráfica"
+  },
+  {
+    "id": 40,
+    "name": "Física para Jogos"
+  },
+  {
+    "id": 41,
+    "name": "Logística e Cadeia de Suprimentos"
+  },
+  {
+    "id": 42,
+    "name": "Sistemas de Gestão Empresarial (ERP)"
+  },
+  {
+    "id": 43,
+    "name": "Sistemas de Automação"
+  },
+  {
+    "id": 44,
+    "name": "Gestão de E-commerce"
+  },
+  {
+    "id": 45,
+    "name": "Sistemas Embarcados"
+  },
+  {
+    "id": 46,
+    "name": "Gestão de Clientes"
+  }
+]

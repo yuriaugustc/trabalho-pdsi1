@@ -51,6 +51,7 @@ export class Login implements OnInit {
   }
 
   async login() {
+    this.router.navigate(['/home']);
     if(!this.form.valid){
       this.toast.add({
         severity: 'warn',

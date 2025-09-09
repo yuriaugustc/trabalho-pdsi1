@@ -1,0 +1,1514 @@
+[
+  {
+    "id": 1,
+    "name": "Estágio em Desenvolvimento Full Stack",
+    "companyName": "TechSolutions Ltda.",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-08T10:00:00Z",
+    "appliesCount": 25,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Estágio em Análise de Dados",
+    "companyName": "Data Insights S.A.",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-07T14:30:00Z",
+    "appliesCount": 18,
+    "category": "Dados",
+    "skills": [
+      {
+        "id": 5,
+        "name": "Estatística e Probabilidade"
+      },
+      {
+        "id": 6,
+        "name": "Inteligência Artificial"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 7,
+        "name": "Mineração de Dados"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Estágio em Marketing Digital",
+    "companyName": "Creative Minds Agência",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-06T09:15:00Z",
+    "appliesCount": 42,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 8,
+        "name": "Sistemas de Informação e Sociedade"
+      },
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Estágio em Gerenciamento de Projetos",
+    "companyName": "Global Partners Consultoria",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-05T16:45:00Z",
+    "appliesCount": 10,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 11,
+        "name": "Gestão de Projetos"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 13,
+        "name": "Análise de Requisitos"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Estágio em Designer de Produto",
+    "companyName": "Inovatech Design Studio",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-04T11:20:00Z",
+    "appliesCount": 35,
+    "category": "Design e UX/UI",
+    "skills": [
+      {
+        "id": 14,
+        "name": "Interação Humano-Computador"
+      },
+      {
+        "id": 15,
+        "name": "Design de Interfaces"
+      },
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 16,
+        "name": "Design Gráfico"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Estágio em Engenharia de Software",
+    "companyName": "Software Hub",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-03T08:00:00Z",
+    "appliesCount": 28,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Estágio em Suporte Técnico",
+    "companyName": "ConnectIT Services",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-02T13:10:00Z",
+    "appliesCount": 55,
+    "category": "Infraestrutura e Suporte",
+    "skills": [
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 19,
+        "name": "Sistemas Operacionais"
+      },
+      {
+        "id": 20,
+        "name": "Manutenção de Computadores"
+      },
+      {
+        "id": 21,
+        "name": "Segurança da Informação"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Estágio em Contabilidade",
+    "companyName": "FinanCorp",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-01T10:50:00Z",
+    "appliesCount": 12,
+    "category": "Financeiro e Administrativo",
+    "skills": [
+      {
+        "id": 22,
+        "name": "Contabilidade e Finanças"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 24,
+        "name": "Sistemas de Apoio à Decisão"
+      },
+      {
+        "id": 25,
+        "name": "Economia"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Estágio em RH",
+    "companyName": "People First",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-31T15:25:00Z",
+    "appliesCount": 20,
+    "category": "Recursos Humanos",
+    "skills": [
+      {
+        "id": 26,
+        "name": "Gestão de Pessoas"
+      },
+      {
+        "id": 27,
+        "name": "Psicologia Organizacional"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 28,
+        "name": "Legislação Trabalhista"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Estágio em Administração",
+    "companyName": "Office Solutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-30T09:40:00Z",
+    "appliesCount": 60,
+    "category": "Financeiro e Administrativo",
+    "skills": [
+      {
+        "id": 29,
+        "name": "Teoria Geral da Administração"
+      },
+      {
+        "id": 30,
+        "name": "Organização e Métodos"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 25,
+        "name": "Economia"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Estágio em Arquitetura de Soluções",
+    "companyName": "Enterprise Architects",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-29T11:00:00Z",
+    "appliesCount": 15,
+    "category": "Arquitetura e Engenharia",
+    "skills": [
+      {
+        "id": 31,
+        "name": "Arquitetura de Sistemas de Informação"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Estágio em Desenvolvimento Back-end",
+    "companyName": "Codify Tech",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-28T14:15:00Z",
+    "appliesCount": 33,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 3,
+        "name": "Programação Web"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Estágio em Cibersegurança",
+    "companyName": "SecureNet Inc.",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-27T10:30:00Z",
+    "appliesCount": 21,
+    "category": "Segurança da Informação",
+    "skills": [
+      {
+        "id": 21,
+        "name": "Segurança da Informação"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 32,
+        "name": "Criptografia"
+      },
+      {
+        "id": 33,
+        "name": "Auditoria de Sistemas"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Estágio em Gestão de Produto",
+    "companyName": "Agile Innovations",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-26T16:00:00Z",
+    "appliesCount": 29,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 11,
+        "name": "Gestão de Projetos"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 14,
+        "name": "Interação Humano-Computador"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Estágio em Ciência de Dados",
+    "companyName": "Cognitive AI Lab",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-25T09:00:00Z",
+    "appliesCount": 7,
+    "category": "Dados",
+    "skills": [
+      {
+        "id": 5,
+        "name": "Estatística e Probabilidade"
+      },
+      {
+        "id": 6,
+        "name": "Inteligência Artificial"
+      },
+      {
+        "id": 7,
+        "name": "Mineração de Dados"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Estágio em Desenvolvimento Front-end",
+    "companyName": "WebCrafters",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-24T12:00:00Z",
+    "appliesCount": 45,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 14,
+        "name": "Interação Humano-Computador"
+      },
+      {
+        "id": 15,
+        "name": "Design de Interfaces"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Estágio em Engenharia de Cloud",
+    "companyName": "CloudSphere",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-23T15:30:00Z",
+    "appliesCount": 19,
+    "category": "Infraestrutura e Suporte",
+    "skills": [
+      {
+        "id": 34,
+        "name": "Computação em Nuvem"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 19,
+        "name": "Sistemas Operacionais"
+      },
+      {
+        "id": 21,
+        "name": "Segurança da Informação"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Estágio em Testes QA",
+    "companyName": "Quality Assured",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-22T10:45:00Z",
+    "appliesCount": 38,
+    "category": "Qualidade de Software",
+    "skills": [
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 13,
+        "name": "Análise de Requisitos"
+      },
+      {
+        "id": 35,
+        "name": "Qualidade de Software"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Estágio em Vendas",
+    "companyName": "Sales Force One",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-21T08:20:00Z",
+    "appliesCount": 24,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      },
+      {
+        "id": 22,
+        "name": "Contabilidade e Finanças"
+      },
+      {
+        "id": 29,
+        "name": "Teoria Geral da Administração"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Estágio em Pesquisa de UX",
+    "companyName": "User Insights Co.",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-20T14:50:00Z",
+    "appliesCount": 31,
+    "category": "Design e UX/UI",
+    "skills": [
+      {
+        "id": 14,
+        "name": "Interação Humano-Computador"
+      },
+      {
+        "id": 15,
+        "name": "Design de Interfaces"
+      },
+      {
+        "id": 8,
+        "name": "Sistemas de Informação e Sociedade"
+      },
+      {
+        "id": 37,
+        "name": "Pesquisa e Usabilidade"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Estágio em Desenvolvimento Mobile (iOS)",
+    "companyName": "App Makers",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-19T11:00:00Z",
+    "appliesCount": 17,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 38,
+        "name": "Programação para Dispositivos Móveis"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 15,
+        "name": "Design de Interfaces"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Estágio em SEO/SEM",
+    "companyName": "Digital Boost",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-18T16:30:00Z",
+    "appliesCount": 40,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      },
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Estágio em Conteúdo",
+    "companyName": "Content Hub",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-17T09:55:00Z",
+    "appliesCount": 26,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      },
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 8,
+        "name": "Sistemas de Informação e Sociedade"
+      },
+      {
+        "id": 16,
+        "name": "Design Gráfico"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Estágio em BI (Business Intelligence)",
+    "companyName": "Metrics Solutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-16T13:40:00Z",
+    "appliesCount": 14,
+    "category": "Dados",
+    "skills": [
+      {
+        "id": 7,
+        "name": "Mineração de Dados"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 24,
+        "name": "Sistemas de Apoio à Decisão"
+      },
+      {
+        "id": 5,
+        "name": "Estatística e Probabilidade"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Estágio em DevOps",
+    "companyName": "CloudOps",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-15T10:00:00Z",
+    "appliesCount": 23,
+    "category": "Infraestrutura e Suporte",
+    "skills": [
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 34,
+        "name": "Computação em Nuvem"
+      },
+      {
+        "id": 19,
+        "name": "Sistemas Operacionais"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Estágio em Machine Learning",
+    "companyName": "AI Wizards",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-14T15:20:00Z",
+    "appliesCount": 8,
+    "category": "Inteligência Artificial",
+    "skills": [
+      {
+        "id": 6,
+        "name": "Inteligência Artificial"
+      },
+      {
+        "id": 5,
+        "name": "Estatística e Probabilidade"
+      },
+      {
+        "id": 7,
+        "name": "Mineração de Dados"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Estágio em Desenvolvimento de Jogos",
+    "companyName": "GameDev Studio",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-13T11:30:00Z",
+    "appliesCount": 50,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 39,
+        "name": "Computação Gráfica"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 40,
+        "name": "Física para Jogos"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Estágio em Marketing",
+    "companyName": "Digital First",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-12T09:10:00Z",
+    "appliesCount": 36,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      },
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      },
+      {
+        "id": 8,
+        "name": "Sistemas de Informação e Sociedade"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Estágio em Logística",
+    "companyName": "Supply Chain Pros",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-11T14:45:00Z",
+    "appliesCount": 11,
+    "category": "Logística e Suprimentos",
+    "skills": [
+      {
+        "id": 41,
+        "name": "Logística e Cadeia de Suprimentos"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 24,
+        "name": "Sistemas de Apoio à Decisão"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Estágio em Redes de Computadores",
+    "companyName": "Network Solutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-10T10:00:00Z",
+    "appliesCount": 22,
+    "category": "Infraestrutura e Suporte",
+    "skills": [
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 19,
+        "name": "Sistemas Operacionais"
+      },
+      {
+        "id": 21,
+        "name": "Segurança da Informação"
+      },
+      {
+        "id": 34,
+        "name": "Computação em Nuvem"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Estágio em Desenvolvimento Full Stack",
+    "companyName": "Enterprise Solutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-09T16:00:00Z",
+    "appliesCount": 5,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Estágio em Processos de Negócio",
+    "companyName": "BPM Consultants",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-08T12:00:00Z",
+    "appliesCount": 16,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 29,
+        "name": "Teoria Geral da Administração"
+      },
+      {
+        "id": 30,
+        "name": "Organização e Métodos"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Estágio em Produto",
+    "companyName": "Product Heroes",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-07T10:30:00Z",
+    "appliesCount": 30,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 14,
+        "name": "Interação Humano-Computador"
+      },
+      {
+        "id": 11,
+        "name": "Gestão de Projetos"
+      },
+      {
+        "id": 13,
+        "name": "Análise de Requisitos"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Estágio em Consultoria ERP",
+    "companyName": "Systech Integrations",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-06T15:00:00Z",
+    "appliesCount": 9,
+    "category": "Consultoria e Implementação",
+    "skills": [
+      {
+        "id": 42,
+        "name": "Sistemas de Gestão Empresarial (ERP)"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 11,
+        "name": "Gestão de Projetos"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Estágio em Desenvolvimento RPA",
+    "companyName": "RoboSolutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-05T09:40:00Z",
+    "appliesCount": 27,
+    "category": "Inteligência Artificial",
+    "skills": [
+      {
+        "id": 6,
+        "name": "Inteligência Artificial"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Estágio em Análise de Dados",
+    "companyName": "Data Miners",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-04T13:20:00Z",
+    "appliesCount": 44,
+    "category": "Dados",
+    "skills": [
+      {
+        "id": 5,
+        "name": "Estatística e Probabilidade"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 7,
+        "name": "Mineração de Dados"
+      },
+      {
+        "id": 24,
+        "name": "Sistemas de Apoio à Decisão"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Estágio em Mídias Sociais",
+    "companyName": "Social Wave",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-03T11:00:00Z",
+    "appliesCount": 39,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      },
+      {
+        "id": 16,
+        "name": "Design Gráfico"
+      },
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Estágio em Automação",
+    "companyName": "Automate Now",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-02T16:15:00Z",
+    "appliesCount": 13,
+    "category": "Automação",
+    "skills": [
+      {
+        "id": 43,
+        "name": "Sistemas de Automação"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Estágio em Desenvolvimento iOS",
+    "companyName": "App Builders",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-08-01T10:00:00Z",
+    "appliesCount": 25,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 38,
+        "name": "Programação para Dispositivos Móveis"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 15,
+        "name": "Design de Interfaces"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Estágio em Finanças",
+    "companyName": "Finance Matters",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-31T14:30:00Z",
+    "appliesCount": 18,
+    "category": "Financeiro e Administrativo",
+    "skills": [
+      {
+        "id": 22,
+        "name": "Contabilidade e Finanças"
+      },
+      {
+        "id": 25,
+        "name": "Economia"
+      },
+      {
+        "id": 24,
+        "name": "Sistemas de Apoio à Decisão"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Estágio em Desenvolvimento .NET",
+    "companyName": "Code Logic",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-30T09:00:00Z",
+    "appliesCount": 22,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Estágio em Arquitetura de Software",
+    "companyName": "Architects Guild",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-29T16:00:00Z",
+    "appliesCount": 7,
+    "category": "Arquitetura e Engenharia",
+    "skills": [
+      {
+        "id": 31,
+        "name": "Arquitetura de Sistemas de Informação"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Estágio em E-commerce",
+    "companyName": "E-commerce Experts",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-28T11:20:00Z",
+    "appliesCount": 33,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 3,
+        "name": "Programação Web"
+      },
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 44,
+        "name": "Gestão de E-commerce"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Estágio em Desenvolvimento C++",
+    "companyName": "GameCraft",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-27T08:30:00Z",
+    "appliesCount": 19,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 39,
+        "name": "Computação Gráfica"
+      },
+      {
+        "id": 45,
+        "name": "Sistemas Embarcados"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Estágio em Segurança da Informação",
+    "companyName": "CyberGuard",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-26T14:50:00Z",
+    "appliesCount": 29,
+    "category": "Segurança da Informação",
+    "skills": [
+      {
+        "id": 21,
+        "name": "Segurança da Informação"
+      },
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 32,
+        "name": "Criptografia"
+      },
+      {
+        "id": 19,
+        "name": "Sistemas Operacionais"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Estágio em Marketing",
+    "companyName": "Brand Innovators",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-25T10:15:00Z",
+    "appliesCount": 10,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      },
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      },
+      {
+        "id": 16,
+        "name": "Design Gráfico"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Estágio em Desenvolvimento Java",
+    "companyName": "Java Pros",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-24T12:45:00Z",
+    "appliesCount": 15,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Estágio em Sucesso do Cliente",
+    "companyName": "Customer First",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-23T16:20:00Z",
+    "appliesCount": 38,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 46,
+        "name": "Gestão de Clientes"
+      },
+      {
+        "id": 26,
+        "name": "Gestão de Pessoas"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 8,
+        "name": "Sistemas de Informação e Sociedade"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Estágio em Gestão de Projetos",
+    "companyName": "Project Masters",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-22T09:00:00Z",
+    "appliesCount": 24,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 11,
+        "name": "Gestão de Projetos"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 13,
+        "name": "Análise de Requisitos"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Estágio em Desenvolvimento Flutter",
+    "companyName": "Mobile Innovators",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-07-21T13:30:00Z",
+    "appliesCount": 35,
+    "category": "Desenvolvimento",
+    "skills": [
+      {
+        "id": 38,
+        "name": "Programação para Dispositivos Móveis"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 15,
+        "name": "Design de Interfaces"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Estágio em Engenharia de Dados",
+    "companyName": "Data Insights S.A.",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-08T12:00:00Z",
+    "appliesCount": 15,
+    "category": "Dados",
+    "skills": [
+      {
+        "id": 2,
+        "name": "Banco de Dados"
+      },
+      {
+        "id": 7,
+        "name": "Mineração de Dados"
+      },
+      {
+        "id": 34,
+        "name": "Computação em Nuvem"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Estágio em Conteúdo para Redes Sociais",
+    "companyName": "Creative Minds Agência",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-07T11:00:00Z",
+    "appliesCount": 28,
+    "category": "Marketing e Vendas",
+    "skills": [
+      {
+        "id": 9,
+        "name": "Comunicação Digital"
+      },
+      {
+        "id": 10,
+        "name": "Gestão de Conteúdo"
+      },
+      {
+        "id": 16,
+        "name": "Design Gráfico"
+      },
+      {
+        "id": 36,
+        "name": "Marketing e Vendas"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Estágio em Qualidade de Software",
+    "companyName": "Quality Assured",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-06T15:00:00Z",
+    "appliesCount": 45,
+    "category": "Qualidade de Software",
+    "skills": [
+      {
+        "id": 35,
+        "name": "Qualidade de Software"
+      },
+      {
+        "id": 4,
+        "name": "Engenharia de Software"
+      },
+      {
+        "id": 17,
+        "name": "Programação Orientada a Objetos"
+      },
+      {
+        "id": 13,
+        "name": "Análise de Requisitos"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Estágio em Automação de Processos Robóticos",
+    "companyName": "RoboSolutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-05T10:30:00Z",
+    "appliesCount": 31,
+    "category": "Inteligência Artificial",
+    "skills": [
+      {
+        "id": 6,
+        "name": "Inteligência Artificial"
+      },
+      {
+        "id": 12,
+        "name": "Modelagem de Processos de Negócio"
+      },
+      {
+        "id": 1,
+        "name": "Estruturas de Dados"
+      },
+      {
+        "id": 43,
+        "name": "Sistemas de Automação"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Estágio em Suporte de Redes",
+    "companyName": "Network Solutions",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-04T09:00:00Z",
+    "appliesCount": 18,
+    "category": "Infraestrutura e Suporte",
+    "skills": [
+      {
+        "id": 18,
+        "name": "Redes de Computadores"
+      },
+      {
+        "id": 19,
+        "name": "Sistemas Operacionais"
+      },
+      {
+        "id": 21,
+        "name": "Segurança da Informação"
+      },
+      {
+        "id": 34,
+        "name": "Computação em Nuvem"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Estágio em Gestão de Clientes",
+    "companyName": "Customer First",
+    "companyPhoto": "https://random.imagecdn.app/150/150",
+    "createdAt": "2025-09-03T14:20:00Z",
+    "appliesCount": 22,
+    "category": "Gestão",
+    "skills": [
+      {
+        "id": 46,
+        "name": "Gestão de Clientes"
+      },
+      {
+        "id": 26,
+        "name": "Gestão de Pessoas"
+      },
+      {
+        "id": 23,
+        "name": "Sistemas Gerenciais"
+      },
+      {
+        "id": 29,
+        "name": "Teoria Geral da Administração"
+      }
+    ]
+  }
+]
