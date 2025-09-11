@@ -51,7 +51,6 @@ export class Login implements OnInit {
   }
 
   async login() {
-    this.router.navigate(['/home']);
     if(!this.form.valid){
       this.toast.add({
         severity: 'warn',
@@ -64,7 +63,7 @@ export class Login implements OnInit {
     
     this.spinner.show();
 
-    let userDb = await this.authService.getUserByEmail(user.email!);
+    const userDb = await this.authService.getUserByEmail(user.email!);
 
     if(!userDb) {
       this.toast.add({
@@ -86,14 +85,14 @@ export class Login implements OnInit {
       return;
     }
 
+    this.authService.loggedUser = userDb;
+    this.router.navigate(['/home']);
+
     this.toast.add({
       severity: 'success',
       summary: 'Olá!',
       detail: 'Bem vindo.'
     });
-
-    this.router.navigate(['/home']);
-    this.spinner.hide();
   }
 
   validateError(controlName: string) {
