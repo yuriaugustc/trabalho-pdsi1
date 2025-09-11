@@ -4,13 +4,24 @@ import { environment } from "environments/environment";
 import { map, Observable, take } from "rxjs";
 import { Job } from "../models/job";
 import { Skill } from "../models/skill";
+import Dexie, { Table } from 'dexie';
 
 @Injectable()
-export class JobService {
+export class JobService extends Dexie {
+  jobsApplied!: Table<Job, number>;
+  jobsSaved!: Table<Job, number>;
   baseUrl = `${environment.apiUrl}/project`;
+
   constructor(
     private http: HttpClient
-  ) { }
+  ) { 
+    super(environment.localDbName); // nome do banco
+    this.version(1)
+			.stores({
+      	jobsApplied: '++id',
+      	jobsSaved: '++id',
+    	});
+  }
 
   loadJobsMock(): Observable<Job[]>
   {
@@ -25,6 +36,13 @@ export class JobService {
         })),
         take(1)
       );
+  }
+
+  loadJobByIdMock(id: number): Observable<Job>
+  {
+    return this.loadJobsMock().pipe(
+      map(data => data.find(j => j.id === id)!)
+    );
   }
 
   loadCompaniesMock(): Observable<string[]>
@@ -55,5 +73,37 @@ export class JobService {
         map(result => result as Skill[]),
         take(1)
       );
+  }
+
+  async getAppliedJobs() {
+    return await this.jobsApplied.toArray();
+  }
+
+  jobApplied(id: number): boolean {
+    return this.jobsApplied.where('id').equals(id) !== undefined;
+  }
+
+  saveJobApplied(job: Job) {
+    this.jobsApplied.add(job);
+  }
+
+  removeJobApplied(id: number) {
+    this.jobsApplied.delete(id);
+  }
+
+  async getSavedJobs() {
+    return await this.jobsSaved.toArray();
+  }
+
+  jobSaved(id: number): boolean {
+    return this.jobsSaved.where('id').equals(id) !== undefined;
+  }
+
+  saveJobSaved(job: Job) {
+    this.jobsSaved.add(job);
+  }
+
+  removeJobSaved(id: number) {
+    this.jobsSaved.delete(id);
   }
 }

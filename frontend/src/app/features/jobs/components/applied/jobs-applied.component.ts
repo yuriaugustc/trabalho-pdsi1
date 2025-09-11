@@ -20,9 +20,9 @@ import { Skill } from "@features/jobs/models/skill";
 import { Router } from "@angular/router";
 
 @Component({
-  selector: 'jobs-list',
+  selector: 'jobs-applied',
   standalone: true,
-  templateUrl: './jobs-list.component.html',
+  templateUrl: './jobs-applied.component.html',
   imports: [
     ButtonModule,
     CommonModule,
@@ -42,7 +42,7 @@ import { Router } from "@angular/router";
     JobService
   ]
 })
-export class JobsList implements OnInit {
+export class JobsApplied implements OnInit {
   jobs: Job[] = [];
   jobsFiltered: Job[] = [];
   companies: string[] = [];
@@ -59,10 +59,7 @@ export class JobsList implements OnInit {
 
   ngOnInit(): void {
     this.initFilterJob();
-    this.loadJobs();
-    this.loadCompanies();
-    this.loadCategories();
-    this.loadSkills();
+    this.loadJobsApplied();
   }
 
   initFilterJob() {
@@ -103,82 +100,36 @@ export class JobsList implements OnInit {
   }
 
   detailJob(id: number) {
-    this.router.navigate(['/jobs', id], { queryParams: { from: 'list' } });
+    this.router.navigate(['/jobs', id], { queryParams: { from: 'applied' } });
   }
 
-  loadJobs() {
+  async loadJobsApplied() {
     this.spinner.show();
 
-    this.jobService
-    .loadJobsMock()
-    .subscribe({
-      next: (data: Job[]) => {
-        this.jobsFiltered = this.jobs = data;
-        this.loadFilterInCache();
-      },
-      error: (err) => {
-        this.toast.add({
-          severity: 'error',
-          summary: 'Erro ao carregar os dados',
-          detail: 'Houve um erro inesperado, tente novamente em breve.'
-        });
-        console.error(err);
-      }
-    })
-    .add(() => {
-      this.spinner.hide();
-    });
-  }
+    this.jobs = await this.jobService.getAppliedJobs();
+    this.jobsFiltered = this.jobs;
+    this.loadFilterInCache();
 
-  loadCompanies() {
-    this.jobService
-    .loadCompaniesMock()
-    .subscribe({
-      next: (data: string[]) => {
-        this.companies = data;
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    })
-  }
+    this.companies = [...new Set(this.jobs.map(j => j.companyName))];
+    this.categories = [...new Set(this.jobs.map(j => j.category))];
+    
+    let skills = this.jobs.map(j => j.skills);
+    let skillsArr: Skill[] = [];
+    skills.forEach(s => skillsArr.push(...s));
 
-  loadCategories() {
-    this.jobService
-    .loadCategoriesMock()
-    .subscribe({
-      next: (data: string[]) => {
-        this.categories = data;
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    })
-  }
-
-  loadSkills() {
-    this.jobService
-    .loadSkillsMock()
-    .subscribe({
-      next: (data: any[]) => {
-        this.skills = data;
-      },
-      error: (err) => {
-        console.error(err);
-      }
-    })
+    this.skills = [...new Map(skillsArr.map(s => [s.id, s])).values()];
   }
 
   saveFilterInCache() {
     sessionStorage.setItem(
-      'job-filter-cache',
+      'applied-job-filter-cache',
       JSON.stringify(this.jobFilter)
     );
   }
 
   loadFilterInCache() {
     this.initFilterJob();
-    let filterInCache = sessionStorage.getItem('job-filter-cache');
+    let filterInCache = sessionStorage.getItem('applied-job-filter-cache');
     let filterObjCache = { 
       ...this.jobFilter
     } as JobFilter;

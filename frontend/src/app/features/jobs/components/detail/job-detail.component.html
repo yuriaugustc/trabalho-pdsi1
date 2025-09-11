@@ -1,4 +1,49 @@
 
-<div class="flex w-full pt-5">
-  
+<div class="flex flex-col w-full h-full pt-5" *ngIf="job">
+  <div class="flex my-2">
+    <p-button severity="secondary" label="Voltar" icon="pi pi-chevron-left" outlined (onClick)="voltar()"/>
+  </div>
+  <div class="card flex flex-col">
+    <h4>{{ job.name }}</h4>
+    <div class="flex flex-col gap-4">
+      <div class="flex w-full gap-3 items-center">
+        <img [src]="job.companyPhoto" width="25">
+        <span class="text-lg">{{ job.companyName }}</span>
+      </div>
+      <div class="flex w-full gap-3">
+        <span>{{ job.location }}</span>
+        -
+        <span>{{ job.modality }}</span>
+        -
+        <span>{{ job.appliesCount }} candidaturas</span>
+      </div>
+      <div class="flex w-full gap-3">
+        Vaga registrada em: {{ job.createdAt | date: "dd/MM/yyyy" }}
+      </div>
+      <div class="flex w-full gap-3">
+        <p-button #apply
+          [label]="userApplied ? 'Candidatou-se' : 'Candidatar-se'" 
+          (onClick)="applyJob()"/>
+        <p-button #save 
+          [label]="userSaved ? 'Salvo' : 'Salvar'"
+          [icon]="userSaved ? 'pi pi-heart-fill' : 'pi pi-heart'"
+          severity="secondary" 
+          (onClick)="saveJob()"/>
+      </div>
+    </div>
+  </div>
+  <div class="card flex flex-col gap-2">
+    <h5>Requisitos:</h5>
+    <div class="flex flex-col gap-2">
+      <div *ngFor="let sk of job.skills">
+        <p-tag [value]="sk.name"/>
+      </div>
+    </div>
+  </div>
+  <div class="card flex flex-col gap-2">
+    <h5>Sobre a vaga:</h5>
+    <div class="flex w-full">
+      <p [innerHTML]="job.description | sanitizer"></p>
+    </div>
+  </div>
 </div>
