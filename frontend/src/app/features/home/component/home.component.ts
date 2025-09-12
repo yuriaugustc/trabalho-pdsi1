@@ -1,7 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { Component, OnInit, ViewChild } from "@angular/core";
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from "@angular/router";
-import { Access } from "@core/enums/access";
 import { Role } from "@core/enums/role";
 import { AuthService } from "@shared/services/auth.service";
 import { NgxSpinnerService } from "ngx-spinner";

@@ -8,6 +8,7 @@ import { ToastModule } from 'primeng/toast';
 import { Translation } from 'primeng/api';
 import { PrimeNG } from 'primeng/config';
 import { SessionMonitorService } from '@shared/services/session-monitor.service';
+import { DatabaseService } from '@shared/services/database.service';
 
 @Component({
   selector: 'app-root',
@@ -30,7 +31,7 @@ export class AppComponent {
   constructor(
     private config: PrimeNG,
     private http: HttpClient,
-    private sessionMonitor: SessionMonitorService
+    private dbService: DatabaseService
   ) {
     this.http.get('./assets/translate/pt-br.json').subscribe({
       next: (translate: Translation) => {
@@ -40,5 +41,10 @@ export class AppComponent {
         console.error(err)
       }
     });
+
+    // insert companies and users
+    this.dbService.insertCompanyUsers();
+    this.dbService.insertStudentUsers();
+    this.dbService.insertJobs();
   }
 }

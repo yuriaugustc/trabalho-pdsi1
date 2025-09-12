@@ -1,41 +1,24 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { environment } from "environments/environment";
-import { map, Observable, take } from "rxjs";
+import { from, map, Observable, take } from "rxjs";
 import { Job } from "../models/job";
 import { Skill } from "../models/skill";
 import Dexie, { Table } from 'dexie';
+import { DatabaseService } from "@shared/services/database.service";
 
 @Injectable()
-export class JobService extends Dexie {
-  jobsApplied!: Table<Job, number>;
-  jobsSaved!: Table<Job, number>;
+export class JobService {
   baseUrl = `${environment.apiUrl}/project`;
 
   constructor(
-    private http: HttpClient
-  ) { 
-    super(environment.localDbName); // nome do banco
-    this.version(1)
-			.stores({
-      	jobsApplied: '++id',
-      	jobsSaved: '++id',
-    	});
-  }
+    private http: HttpClient,
+    private dbService: DatabaseService
+  ) { }
 
   loadJobsMock(): Observable<Job[]>
   {
-    return this.http
-      .get("assets/mocks/jobs/jobs.mock.json")
-      .pipe(
-        map(result => (result as any[]).map(j => {
-          return {
-            ...j,
-            createdAt: new Date(j.createdAt)
-          } as Job
-        })),
-        take(1)
-      );
+    return from(this.dbService.loadJobs());
   }
 
   loadJobByIdMock(id: number): Observable<Job>
@@ -48,7 +31,7 @@ export class JobService extends Dexie {
   loadCompaniesMock(): Observable<string[]>
   {
     return this.http
-      .get("assets/mocks/jobs/company.mock.json")
+      .get("assets/mocks/company.mock.json")
       .pipe(
         map(result => result as string[]),
         take(1)
@@ -58,7 +41,7 @@ export class JobService extends Dexie {
   loadCategoriesMock(): Observable<string[]>
   {
     return this.http
-      .get("assets/mocks/jobs/category.mock.json")
+      .get("assets/mocks/category.mock.json")
       .pipe(
         map(result => result as string[]),
         take(1)
@@ -68,42 +51,62 @@ export class JobService extends Dexie {
   loadSkillsMock(): Observable<Skill[]>
   {
     return this.http
-      .get("assets/mocks/jobs/skills.mock.json")
+      .get("assets/mocks/skills.mock.json")
       .pipe(
         map(result => result as Skill[]),
         take(1)
       );
   }
 
-  async getAppliedJobs() {
-    return await this.jobsApplied.toArray();
+  getJobsByCompanyId(id: number) {
+    return from(this.dbService.getJobsByCompanyId(id))
   }
 
-  jobApplied(id: number): boolean {
-    return this.jobsApplied.where('id').equals(id) !== undefined;
+  getJobsById(ids: number[]) {
+    return from(this.dbService.getJobsById(ids))
   }
 
-  saveJobApplied(job: Job) {
-    this.jobsApplied.add(job);
+  updateJob(jobId: number, job: Partial<Job>) {
+    this.dbService.updateJob(jobId, job);
   }
 
-  removeJobApplied(id: number) {
-    this.jobsApplied.delete(id);
+  getUsersApplied(jobId: number) {
+    return from(this.dbService.getUsersApplied(jobId));
   }
 
-  async getSavedJobs() {
-    return await this.jobsSaved.toArray();
+  getUsersById(ids: number[]) {
+    return from(this.dbService.getUsersById(ids));
   }
 
-  jobSaved(id: number): boolean {
-    return this.jobsSaved.where('id').equals(id) !== undefined;
+  getAppliedJobs() {
+    return from(this.dbService.getAppliedJobs());
   }
 
-  saveJobSaved(job: Job) {
-    this.jobsSaved.add(job);
+  async jobApplied(Jobid: number, userId: number): Promise<boolean> {
+    return await this.dbService.getAppliedJob(Jobid, userId) !== undefined;
   }
 
-  removeJobSaved(id: number) {
-    this.jobsSaved.delete(id);
+  saveJobApplied(Jobid: number, userId: number) {
+    this.dbService.saveOrApplyJob(Jobid, userId, 1);
+  }
+
+  removeJobApplied(Jobid: number, userId: number) {
+    this.dbService.removeSavedOrAppliedJob(Jobid, userId, 1);
+  }
+
+  saveJobSaved(Jobid: number, userId: number) {
+    this.dbService.saveOrApplyJob(Jobid, userId, 2);
+  }
+
+  removeJobSaved(Jobid: number, userId: number) {
+    this.dbService.removeSavedOrAppliedJob(Jobid, userId, 2);
+  }
+
+  getSavedJobs() {
+    return from(this.dbService.getSavedJobs());
+  }
+
+  async jobSaved(Jobid: number, userId: number): Promise<boolean> {
+    return await this.dbService.getSavedJob(Jobid, userId) !== undefined;
   }
 }

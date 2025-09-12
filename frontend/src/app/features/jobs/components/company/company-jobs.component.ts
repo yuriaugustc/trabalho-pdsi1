@@ -18,19 +18,25 @@ import { FormsModule } from "@angular/forms";
 import { JobFilter } from "@features/jobs/models/job-filter";
 import { Skill } from "@features/jobs/models/skill";
 import { Router } from "@angular/router";
+import { AuthService } from "@shared/services/auth.service";
+import { DialogModule } from "primeng/dialog";
+import { TableModule } from "primeng/table";
+import { User } from "@shared/models/user";
 
 @Component({
-  selector: 'jobs-saved',
+  selector: 'company-jobs',
   standalone: true,
-  templateUrl: './jobs-saved.component.html',
+  templateUrl: './company-jobs.component.html',
   imports: [
     ButtonModule,
     CommonModule,
     FormsModule,
     DataViewModule,
     DatePickerModule,
+    DialogModule,
     FloatLabelModule,
     InputTextModule,
+    TableModule,
     TagModule,
     TooltipModule,
     SelectModule,
@@ -42,24 +48,30 @@ import { Router } from "@angular/router";
     JobService
   ]
 })
-export class JobsSaved implements OnInit {
+export class CompanyJobs implements OnInit {
+  companyId: number = 0;
   jobs: Job[] = [];
   jobsFiltered: Job[] = [];
   companies: string[] = [];
   categories: string[] = [];
   skills: any[] = [];
   jobFilter!: JobFilter;
+  dialogVisible = false;
+  usersApplied: User[] = [];
 
   constructor(
     private toast: MessageService,
     private spinner: NgxSpinnerService,
     private jobService: JobService,
-    private router: Router
-  ) { }
+    private router: Router,
+    authService: AuthService
+  ) { 
+    this.companyId = authService.loggedUser!.id!;
+  }
 
   ngOnInit(): void {
     this.initFilterJob();
-    this.loadJobsSaved();
+    this.companyJobs();
   }
 
   initFilterJob() {
@@ -100,45 +112,58 @@ export class JobsSaved implements OnInit {
   }
 
   detailJob(id: number) {
-    this.router.navigate(['/jobs', id], { queryParams: { from: 'saved' } });
+    this.router.navigate(['/jobs', id], { queryParams: { from: 'company-jobs' } });
   }
 
-  async loadJobsSaved() {
+  detailCandidates(id: number) {
+    this.spinner.show();
+    
+    this.jobService.getUsersApplied(id)
+      .subscribe((jobs) => {
+        const jobUsers = jobs.filter(j => j !== undefined);
+        const ids = jobUsers.map(j => j.userId);
+
+        this.jobService.getUsersById(ids)
+          .subscribe((users) => {
+            this.usersApplied = users.filter(j => j !== undefined);
+            this.dialogVisible = true;
+          });
+      })
+      .add(() => this.spinner.hide());
+  }
+
+  companyJobs() {
     this.spinner.show();
 
-    this.jobService.getSavedJobs()
+    this.jobService.getJobsByCompanyId(this.companyId)
       .subscribe((jobs) => {
-        const ids = jobs.map(j => j.jobId);
-        this.jobService.getJobsById(ids)
-          .subscribe((jobs) => {
-            this.jobs = jobs.filter(j => j !== undefined);
-            this.jobsFiltered = this.jobs;
-            this.loadFilterInCache();
+        this.jobs = jobs.filter(j => j !== undefined);
+        this.jobsFiltered = this.jobs;
+        this.loadFilterInCache();
+    
+        this.companies = [...new Set(this.jobs.map(j => j.companyName))];
+        this.categories = [...new Set(this.jobs.map(j => j.category))];
         
-            this.companies = [...new Set(this.jobs.map(j => j.companyName))];
-            this.categories = [...new Set(this.jobs.map(j => j.category))];
-            
-            let skills = this.jobs.map(j => j.skills);
-            let skillsArr: Skill[] = [];
-            skills.forEach(s => skillsArr.push(...s));
-        
-            this.skills = [...new Map(skillsArr.map(s => [s.id, s])).values()];
+        let skills = this.jobs.map(j => j.skills);
+        let skillsArr: Skill[] = [];
+        skills.forEach(s => skillsArr.push(...s));
+    
+        this.skills = [...new Map(skillsArr.map(s => [s.id, s])).values()];
 
-            this.spinner.hide();
-          });
+        this.spinner.hide();
       });
   }
 
   saveFilterInCache() {
     sessionStorage.setItem(
-      'saved-job-filter-cache',
+      'company-job-filter-cache',
       JSON.stringify(this.jobFilter)
     );
   }
 
   loadFilterInCache() {
     this.initFilterJob();
-    let filterInCache = sessionStorage.getItem('saved-job-filter-cache');
+    let filterInCache = sessionStorage.getItem('company-job-filter-cache');
     let filterObjCache = { 
       ...this.jobFilter
     } as JobFilter;

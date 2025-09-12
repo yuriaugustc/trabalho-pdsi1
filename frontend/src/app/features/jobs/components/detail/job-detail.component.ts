@@ -11,6 +11,8 @@ import { Job } from "@features/jobs/models/job";
 import { TagModule } from "primeng/tag";
 import { SkeletonModule } from "primeng/skeleton";
 import { SanitizerPipe } from "@core/pipes/html-sanitizier.pipe";
+import { AuthService } from "@shared/services/auth.service";
+import { JobStatus } from "@core/enums/job-status";
 
 @Component({
   selector: 'job-detail',
@@ -24,17 +26,20 @@ import { SanitizerPipe } from "@core/pipes/html-sanitizier.pipe";
     TooltipModule,
     SkeletonModule,
     SanitizerPipe
-], 
+  ], 
   providers: [
     JobService
   ]
 })
 export class JobDetail implements OnInit {
   jobId: number = 0;
+  userId: number = 0;
   from: string = 'list';
   job!: Job;
   userApplied: boolean = false;
   userSaved: boolean = false;
+
+  jobStatus = JobStatus;
 
   constructor(
     private toast: MessageService,
@@ -42,7 +47,10 @@ export class JobDetail implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private service: JobService,
-  ) { }
+    autService: AuthService
+  ) { 
+    this.userId = autService.loggedUser!.id!;
+  }
 
   ngOnInit(): void {
     this.jobId = Number(this.route.snapshot.paramMap.get('id'));
@@ -53,9 +61,10 @@ export class JobDetail implements OnInit {
     this.service
       .loadJobByIdMock(this.jobId)
       .subscribe({
-        next: (data) => {
+        next: async (data) => {
           this.job = data;
-          this.userApplied = this.service.jobApplied(this.jobId);
+          this.userApplied = await this.service.jobApplied(this.jobId, this.userId);
+          this.userSaved = await this.service.jobSaved(this.jobId, this.userId);
         },
         error: (err) => {
           this.toast.add({
@@ -76,9 +85,23 @@ export class JobDetail implements OnInit {
       case 'saved':
         this.router.navigate(['/saved']);
         break;
+      case 'company-jobs':
+        this.router.navigate(['/company/jobs']);
+        break;
       default:
         this.router.navigate(['/jobs']);
     }
+  }
+
+  toggleStatus() {
+    this.job.status = this.job.status == JobStatus.Open ? JobStatus.Closed : JobStatus.Open;
+
+    this.toast.add({
+      severity: 'info',
+      summary: this.job.status == JobStatus.Closed ? 'Vaga encerrada' : 'Vaga reaberta',
+    });
+    
+    this.service.updateJob(this.jobId, { status: this.job.status });
   }
 
   applyJob() {
@@ -87,11 +110,15 @@ export class JobDetail implements OnInit {
       severity: 'info',
       summary: this.userApplied ? 'Candidatado à vaga' : 'Candidatura removida',
     });
-
+    
     if(this.userApplied) {
-      this.service.saveJobApplied(this.job);
+      this.service.saveJobApplied(this.jobId, this.userId);
+      const appliesCount = this.job.appliesCount + 1;
+      this.service.updateJob(this.jobId, { appliesCount });
     } else {
-      this.service.removeJobApplied(this.jobId);
+      this.service.removeJobApplied(this.jobId, this.userId);
+      const appliesCount = this.job.appliesCount - 1;
+      this.service.updateJob(this.jobId, { appliesCount });
     }
   }
 
@@ -103,9 +130,9 @@ export class JobDetail implements OnInit {
     });
 
     if(this.userSaved) {
-      this.service.saveJobSaved(this.job);
+      this.service.saveJobSaved(this.jobId, this.userId);
     } else {
-      this.service.removeJobSaved(this.jobId);
+      this.service.removeJobSaved(this.jobId, this.userId);
     }
   }
 }

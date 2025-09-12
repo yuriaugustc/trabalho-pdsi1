@@ -21,9 +21,16 @@
         Vaga registrada em: {{ job.createdAt | date: "dd/MM/yyyy" }}
       </div>
       <div class="flex w-full gap-3">
-        <p-button #apply
-          [label]="userApplied ? 'Candidatou-se' : 'Candidatar-se'" 
+        <p-button #apply *ngIf="from != 'company-jobs'"
+          [label]="userApplied ? 'Candidatou-se' : 'Candidatar-se'"
+          [disabled]="job.status == jobStatus.Closed"
+          [pTooltip]="job.status == jobStatus.Closed ? 'A vaga foi fechada pela empresa.' : ''"
+          tooltipPosition="top"
           (onClick)="applyJob()"/>
+        <p-button #apply *ngIf="from == 'company-jobs'"
+          [label]="job.status == jobStatus.Closed ? 'Reabrir vaga' : 'Fechar vaga'"
+          [severity]="job.status == jobStatus.Closed ? 'primary' : 'danger'"
+          (onClick)="toggleStatus()"/>
         <p-button #save 
           [label]="userSaved ? 'Salvo' : 'Salvar'"
           [icon]="userSaved ? 'pi pi-heart-fill' : 'pi pi-heart'"

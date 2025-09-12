@@ -103,21 +103,30 @@ export class JobsApplied implements OnInit {
     this.router.navigate(['/jobs', id], { queryParams: { from: 'applied' } });
   }
 
-  async loadJobsApplied() {
+  loadJobsApplied() {
     this.spinner.show();
 
-    this.jobs = await this.jobService.getAppliedJobs();
-    this.jobsFiltered = this.jobs;
-    this.loadFilterInCache();
+    this.jobService.getAppliedJobs()
+      .subscribe((jobs) => {
+        const ids = jobs.map(j => j.jobId);
+        this.jobService.getJobsById(ids)
+          .subscribe((jobs) => {
+            this.jobs = jobs.filter(j => j !== undefined);
+            this.jobsFiltered = this.jobs;
+            this.loadFilterInCache();
+        
+            this.companies = [...new Set(this.jobs.map(j => j.companyName))];
+            this.categories = [...new Set(this.jobs.map(j => j.category))];
+            
+            let skills = this.jobs.map(j => j.skills);
+            let skillsArr: Skill[] = [];
+            skills.forEach(s => skillsArr.push(...s));
+        
+            this.skills = [...new Map(skillsArr.map(s => [s.id, s])).values()];
 
-    this.companies = [...new Set(this.jobs.map(j => j.companyName))];
-    this.categories = [...new Set(this.jobs.map(j => j.category))];
-    
-    let skills = this.jobs.map(j => j.skills);
-    let skillsArr: Skill[] = [];
-    skills.forEach(s => skillsArr.push(...s));
-
-    this.skills = [...new Map(skillsArr.map(s => [s.id, s])).values()];
+            this.spinner.hide();
+          });
+      });
   }
 
   saveFilterInCache() {

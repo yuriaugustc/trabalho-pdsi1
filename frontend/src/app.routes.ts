@@ -13,7 +13,7 @@ export const appRoutes: Routes = [
       { path: 'saved', loadComponent: () => import('@features/jobs/components/saved/jobs-saved.component').then(c => c.JobsSaved) },
       { path: 'notifications', loadComponent: () => import('@shared/components/in-development/in-development').then(c => c.InDevelopment) },
       { path: 'profile', loadComponent: () => import('@shared/components/in-development/in-development').then(c => c.InDevelopment) },
-      { path: 'company/jobs', loadComponent: () => import('@shared/components/in-development/in-development').then(c => c.InDevelopment) },
+      { path: 'company/jobs', loadComponent: () => import('@features/jobs/components/company/company-jobs.component').then(c => c.CompanyJobs) },
       { path: 'company/applies', loadComponent: () => import('@shared/components/in-development/in-development').then(c => c.InDevelopment) },
     ],
   },

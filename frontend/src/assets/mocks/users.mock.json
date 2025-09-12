@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "email": "techsolutions@dominio.com",
+    "name": "TechSolutions Ltda.",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 2,
+    "email": "datainsights@dominio.com",
+    "name": "Data Insights S.A.",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 3,
+    "email": "creativeminds@dominio.com",
+    "name": "Creative Minds Agência",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 4,
+    "email": "globalpartners@dominio.com",
+    "name": "Global Partners Consultoria",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 5,
+    "email": "inovatech@dominio.com",
+    "name": "Inovatech Design Studio",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 6,
+    "email": "softwarehub@dominio.com",
+    "name": "Software Hub",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 7,
+    "email": "connectit@dominio.com",
+    "name": "ConnectIT Services",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 8,
+    "email": "financorp@dominio.com",
+    "name": "FinanCorp",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 9,
+    "email": "peoplefirst@dominio.com",
+    "name": "People First",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 10,
+    "email": "officesolutions@dominio.com",
+    "name": "Office Solutions",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 11,
+    "email": "enterprisearchitects@dominio.com",
+    "name": "Enterprise Architects",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 12,
+    "email": "codifytech@dominio.com",
+    "name": "Codify Tech",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 13,
+    "email": "securenet@dominio.com",
+    "name": "SecureNet Inc.",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 14,
+    "email": "agileinnovations@dominio.com",
+    "name": "Agile Innovations",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 15,
+    "email": "cognitiveailab@dominio.com",
+    "name": "Cognitive AI Lab",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 16,
+    "email": "webcrafters@dominio.com",
+    "name": "WebCrafters",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 17,
+    "email": "cloudspshere@dominio.com",
+    "name": "CloudSphere",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 18,
+    "email": "qualityassured@dominio.com",
+    "name": "Quality Assured",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 19,
+    "email": "salesforceone@dominio.com",
+    "name": "Sales Force One",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 20,
+    "email": "userinsightsco@dominio.com",
+    "name": "User Insights Co.",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 21,
+    "email": "appmakers@dominio.com",
+    "name": "App Makers",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 22,
+    "email": "digitalboost@dominio.com",
+    "name": "Digital Boost",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 23,
+    "email": "contenthub@dominio.com",
+    "name": "Content Hub",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 24,
+    "email": "metricssolutions@dominio.com",
+    "name": "Metrics Solutions",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 25,
+    "email": "cloudops@dominio.com",
+    "name": "CloudOps",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 26,
+    "email": "aiwizards@dominio.com",
+    "name": "AI Wizards",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 27,
+    "email": "gamedevstudio@dominio.com",
+    "name": "GameDev Studio",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 28,
+    "email": "digitalfirst@dominio.com",
+    "name": "Digital First",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 29,
+    "email": "supplychainpros@dominio.com",
+    "name": "Supply Chain Pros",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 30,
+    "email": "networksolution@dominio.com",
+    "name": "Network Solutions",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 31,
+    "email": "enterprisesolutions@dominio.com",
+    "name": "Enterprise Solutions",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 32,
+    "email": "bpmconsultants@dominio.com",
+    "name": "BPM Consultants",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 33,
+    "email": "productheroes@dominio.com",
+    "name": "Product Heroes",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 34,
+    "email": "systechintegrations@dominio.com",
+    "name": "Systech Integrations",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 35,
+    "email": "robosolutions@dominio.com",
+    "name": "RoboSolutions",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 36,
+    "email": "dataminers@dominio.com",
+    "name": "Data Miners",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 37,
+    "email": "socialwave@dominio.com",
+    "name": "Social Wave",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 38,
+    "email": "automatenow@dominio.com",
+    "name": "Automate Now",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 39,
+    "email": "appbuilders@dominio.com",
+    "name": "App Builders",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 40,
+    "email": "financematters@dominio.com",
+    "name": "Finance Matters",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 41,
+    "email": "codelogic@dominio.com",
+    "name": "Code Logic",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 42,
+    "email": "architectsguild@dominio.com",
+    "name": "Architects Guild",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 43,
+    "email": "ecommerceexperts@dominio.com",
+    "name": "E-commerce Experts",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 44,
+    "email": "gamecraft@dominio.com",
+    "name": "GameCraft",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 45,
+    "email": "cyberguard@dominio.com",
+    "name": "CyberGuard",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 46,
+    "email": "brandinnovators@dominio.com",
+    "name": "Brand Innovators",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 47,
+    "email": "javapros@dominio.com",
+    "name": "Java Pros",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 48,
+    "email": "customerfirst@dominio.com",
+    "name": "Customer First",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 49,
+    "email": "projectmasters@dominio.com",
+    "name": "Project Masters",
+    "password": "teste@123",
+    "role": "2"
+  },
+  {
+    "id": 50,
+    "email": "mobileinnovators@dominio.com",
+    "name": "Mobile Innovators",
+    "password": "teste@123",
+    "role": "2"
+  }
+]
